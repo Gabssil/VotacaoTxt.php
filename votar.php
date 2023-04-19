@@ -27,7 +27,7 @@
 </html>
 
 <?php
-// Verifica se o formulário foi enviado
+// Verifica o formulário e se foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// Verifica se a opção escolhida é válida
 	if (isset($_POST["cor"]) && in_array($_POST["cor"], ["Azul", "Amarelo", "Vermelho", "Preto"])) {
@@ -42,12 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 }
 
-// Lê o arquivo de votos
+// lendo os arquivos de votos
 $votos = file_get_contents("votos.txt");
 // Converte o conteúdo do arquivo para um array
 $votos = json_decode($votos, true);
 
-// Exibe os resultados da votação
+// Exibe os resultados
 echo "<h1>Resultados das votações:</h1>";
 foreach ($votos as $cor => $votos) {
 	echo "<p>$cor: $votos votos</p>";
