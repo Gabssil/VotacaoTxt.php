@@ -25,7 +25,7 @@
                 </nav>
             </div> 
 
-		<h1>Qual é o seu time de futebol favorito?</h1>
+		<h1>Qual é a sua cor favorita?</h1>
 		<form method="POST" action="votar.php"> 
 			<div class="form-group">
 			<div class="mb-3" align="left">
